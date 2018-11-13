@@ -1,12 +1,10 @@
 # Enter regexp pattern, one per line.
 
-# The following pattern isn't working for external links
-# (https://github.com/filiph/linkcheck/issues/27):
-#
-# forum/flutter-dev # To avoid "missing anchor" error
-#
-# The full link is:
-# https://groups.google.com/forum/#!forum/flutter-dev
+# To avoid "missing anchor" error
+forum/flutter-dev
+
+# GitHub doesn't allow robots, and if we don't skip these links the generated output is too much for Travis
+https://github.com/
 
 # Linkcheck can't see pub tab "anchors"
 https://pub.dartlang.org/packages/.*?\#-.*?-tab-$
